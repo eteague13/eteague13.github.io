@@ -9,3 +9,14 @@ div#homepage{
     text-align: center;
     
 }
+
+p#emailLink{
+    font-size: 200px;
+    text-align: center;
+}
+
+div#emailpage{
+    color:white;
+    text-align: center;
+    
+}
