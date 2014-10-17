@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Me Solutions</title>
+    <link rel="stylesheet" href="stylesheets/mesolutionsCSS.css">
+        <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.3.11/slick.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.3.11/slick.css"/>
+
+<link rel="stylesheet" href="stylesheets/mesolutionsCSS.css">
+</head>
+
+<body>
+    
+    
+    
+    
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Me Solutions</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+            <li><a href="pages/who_we_are.html"><span class="glyphicon glyphicon-user"></span>Who We Are</a></li>
+            <li><a href="pages/what_we_do.html"><span class="glyphicon glyphicon-briefcase"></span>What We Do</a></li>
+            <li><a href="pages/contact_us.html"><span class="glyphicon glyphicon-earphone"></span>Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="jumbotron" id="homepage">
+        <h1>Welcome to Me Solutions</h1>
+        <p>We take your dreams and make them a reality.</p>
+    </div>
+  
+    <div class="carouselPictures">
+        <div><img src="media/bowtie.jpg"></div>
+        <div><img src="media/ballers.jpg"></div>
+    </div>
+    
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.carouselPictures').slick({
+            dots: true,
+            infinite: true,
+            speed: 500,
+            fade: true,
+            slide: '> div',
+            cssEase: 'linear'
+        });
+    });
+</script>
+
+</body>
+</html>
