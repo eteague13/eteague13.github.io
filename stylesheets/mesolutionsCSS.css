@@ -25,6 +25,51 @@ h3{
     color:white;
 }
 
+h3.lightbox{
+    text-align: center;
+}
+
 p{
     color:white;
 }
+
+p#whowearetext{
+    color:white;
+    text-align: center;
+    font-size: 32px;
+}
+p#whatwedotext{
+    color:white;
+    text-align: center;
+    font-size: 32px;
+}
+
+p#software{
+    color:white;
+    text-align: center;
+    font-size: 80px;
+}
+
+p.software{
+    text-align: center;
+}
+
+ul.whatwedo{
+    color:white;
+}
+
+
+p.lightbox{
+    text-align: center;
+}
+
+table.lightbox td{
+    padding: 10px;
+    color:white;
+    font-size: 32px;
+}
+
+table.lightbox td#cost{
+    text-align: right;
+}
+
