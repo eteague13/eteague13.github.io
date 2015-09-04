@@ -1,22 +1,53 @@
 html, body {
-	background-color: #ffffff;
+	background-color: white;
 	height: 100%;
+	color: black;
 }
 
 #headerNav {
-	background-color: white;
+	background-color: black;
 	border: none;
-	padding-top: 20px;
+	color: white;
+	font-size: 20px;
+	float: none;
+
+}
+
+#navigationList {
+	text-align: center;
+	width: 100%;
+}
+#navigationList li{
+	float: none;
+	display: inline-block;
+}
+#navigationList li a {
+	color: white;
+}
+#navigationList li a:hover {
+	background-color: white;
+	color: black;
 }
 	
-
-#siteTitle {
-	font-size: 90px;
+#logo {
+	text-align: center;
+	background-color: black;
 }
 
-#siteTagline {
-	padding-top: 60px;
-	padding-left: 5px;
+.dropdown-menu {
+	background-color: black;
+	font-size: 20px;
+}
+
+.dropdown-menu li a:hover {
+	background-color: white;
+	color: black !important;
+}
+
+.dropdown-toggle:active, 
+.open .dropdown-toggle {
+	background:#FFF !important; 
+	color:#000 !important;
 }
 
 #pageContent{
@@ -32,4 +63,31 @@ html, body {
 #fieldbookLogo {
 	width: 350px;
 	height: auto;
+}
+
+/*contactus*/
+#contactUs {
+	text-align: center;
+}
+
+#mailIcon {
+	width: 550px;
+	height: 300px;
+}
+
+@media screen and (max-width: 660px) {
+	#logoIcon {
+		width: 400px;
+		height: 100px;
+	}
+	#logo {
+		text-align: left;
+	}
+}
+
+@media screen and (max-width: 420px){
+	#logoIcon {
+		width: 300px;
+		height: 75px;
+	}
 }
