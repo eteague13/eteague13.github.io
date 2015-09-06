@@ -17,6 +17,7 @@ html, body {
 	text-align: center;
 	width: 100%;
 }
+
 #navigationList li{
 	float: none;
 	display: inline-block;
@@ -28,6 +29,7 @@ html, body {
 	background-color: white;
 	color: black;
 }
+
 	
 #logo {
 	text-align: center;
@@ -57,6 +59,33 @@ html, body {
 
 .footer {
 	height: 50px;
+	background-color: #D6D6DB;
+}
+
+#home1 {
+	text-align: center;
+	background-image: url("../media/digital.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	min-height: 400px;
+	color: black;
+	font-size: 5em;
+	opacity: 0.7;
+}
+
+#home2 {
+	text-align: center;
+	font-size: 2em;
+}
+
+#teamImg {
+	max-height: 500px;
+	margin: 0 auto;
+}
+
+#homeText {
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 /*iOS Applications*/
@@ -69,13 +98,33 @@ html, body {
 #contactUs {
 	text-align: center;
 }
-
-#mailIcon {
-	width: 550px;
-	height: 300px;
+#mailLink:hover {
+	opacity: 0.6;
 }
 
+#mailIcon {
+	width: 60%;
+	height: 40%;
+}
+
+@media screen and (max-width: 767px) {
+	#home1 {
+		font-size: 4em;
+	}
+	#navigationList {
+		text-align: left;
+		float: left;
+	}
+	#navigationList li {
+		position: relative;
+		display: block;
+	}
+
+}
 @media screen and (max-width: 660px) {
+	#home1 {
+		font-size: 3em;
+	}
 	#logoIcon {
 		width: 400px;
 		height: 100px;
@@ -86,6 +135,9 @@ html, body {
 }
 
 @media screen and (max-width: 420px){
+	#home1 {
+		font-size: 2em;
+	}
 	#logoIcon {
 		width: 300px;
 		height: 75px;
