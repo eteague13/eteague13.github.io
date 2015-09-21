@@ -52,40 +52,40 @@ html, body {
 	color:#000 !important;
 }
 
-#pageContent{
-	min-height: 100%;
-	height: auto;
-}
 
 .footer {
 	height: 50px;
 	background-color: #D6D6DB;
 }
 
-#home1 {
+.titleScrollText {
+	min-height: 50%;
+	font-size: 40px;
 	text-align: center;
-	background-image: url("../media/digital.jpg");
-	background-size: 100%;
+	border-style: solid;
+	background-color: black;
+	color: white;
+}
+.homeScrollText {
+	min-height: 50%;
+	font-size: 40px;
+	text-align: center;
+}
+
+.homeFixedImage {
+	min-height: 50%;
+	background-size: cover;
+	background-attachment: fixed;
 	background-repeat: no-repeat;
-	min-height: 400px;
-	color: black;
-	font-size: 5em;
-	opacity: 0.7;
+	background-position: center center;
 }
 
-#home2 {
-	text-align: center;
-	font-size: 2em;
+#homeImage1 {
+	background-image: url('../media/digital.jpg');
 }
 
-#teamImg {
-	max-height: 500px;
-	margin: 0 auto;
-}
-
-#homeText {
-	padding-left: 20px;
-	padding-right: 20px;
+#homeImage2 {
+	background-image: url('../media/team.jpg');
 }
 
 /*iOS Applications*/
@@ -108,9 +108,6 @@ html, body {
 }
 
 @media screen and (max-width: 767px) {
-	#home1 {
-		font-size: 4em;
-	}
 	#navigationList {
 		text-align: left;
 		float: left;
@@ -122,9 +119,6 @@ html, body {
 
 }
 @media screen and (max-width: 660px) {
-	#home1 {
-		font-size: 3em;
-	}
 	#logoIcon {
 		width: 400px;
 		height: 100px;
@@ -135,9 +129,6 @@ html, body {
 }
 
 @media screen and (max-width: 420px){
-	#home1 {
-		font-size: 2em;
-	}
 	#logoIcon {
 		width: 300px;
 		height: 75px;
