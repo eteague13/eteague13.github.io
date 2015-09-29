@@ -52,6 +52,22 @@ html, body {
 	color:#000 !important;
 }
 
+#aboutUsContent {
+	text-align: center;
+}
+
+#aboutUsContent ul {
+	list-style:none;
+}
+
+#mission, #vision, #principles, #web_paths, #question {
+	border-radius: 20px;
+	border: 2px solid blue;
+	width: 80%;
+	margin: 20px auto;
+	padding: 20px;
+}
+
 
 .footer {
 	height: 50px;
@@ -133,6 +149,18 @@ html, body {
 #mailIcon {
 	width: 60%;
 	height: 40%;
+}
+
+#photoGallery ul {
+    padding:0 0 0 0;
+    margin:0 0 0 0;
+}
+#photoGallery ul li {
+    list-style:none;
+    margin-bottom:25px;
+}
+#photoGallery ul li img {
+    cursor: pointer;
 }
 
 @media screen and (max-width: 767px) {

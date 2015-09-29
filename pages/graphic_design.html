@@ -16,6 +16,21 @@
 			  ga('send', 'pageview');
 
 		</script>
+		<script>
+		 $(document).ready(function(){
+           $('li img').on('click',function(){
+                var src = $(this).attr('src');
+                var img = '<img src="' + src + '" class="img-responsive"/>';
+                $('#myModal').modal();
+                $('#myModal').on('shown.bs.modal', function(){
+                    $('#myModal .modal-body').html(img);
+                });
+                $('#myModal').on('hidden.bs.modal', function(){
+                    $('#myModal .modal-body').html('');
+                });
+           });
+        })
+		</script>
 	</head>
 
 	<body>
@@ -40,25 +55,38 @@
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Products and Services<span class="caret"></span></a>
 							<ul class="dropdown-menu">
 								<li><a href="iOSapplications.html">iOS Applications</a></li>
-								<li><a href="graphic_design.html">Graphic Design</a></li>
+								<li><a href="#">Graphic Design</a></li>
 								<li><a href="web_development.html">Web development</a></li>
 								<li><a href="questions.html">General Questions</a></li>
 							</ul>
 						</li>
-						<li><a href="#">Scratch Pad</a></li>
+						<li><a href="scratch_pad.html">Scratch Pad</a></li>
 						<li><a href="contactus.html">Contact Us</a></li>
 					</ul>
 				</div>
 			</div>
 		</nav>
-		<div class="container-fluid" id="pageContent">
+		<div class="container-fluid" id="photoGallery">
 			<div class="row">
-				<div class="col-md-12">
-					<p>We'll be posting our thoughts about new tech, fun things to try, food we eat, nature, basically anything that we're interested in.</p>
-					<p>We promise to always fully research our work and give you all of the details.</p>
-				</div>
+				<h2 style="text-align: center">Take a look at some of our work so far</h2>
 			</div>
+			<ul class="row">
+				<li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+					<img class="img-responsive" src="../media/fieldbook.png" />
+				</li>
+				<li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+					<img class="img-responsive" src="../media/MELogoTransparency.png" />
+				</li>
+			</ul>
 		</div>
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	    	<div class="modal-dialog">
+	        	<div class="modal-content">
+	          		<div class="modal-body">
+	          		</div>
+	        	</div><!-- /.modal-content -->
+	      	</div><!-- /.modal-dialog -->
+	    </div><!-- /.modal -->
 		<footer class="footer">
       		<div class="container-fluid">
         		<p class="text-center">inoloc 2015</p>
