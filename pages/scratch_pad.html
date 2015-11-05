@@ -54,8 +54,57 @@
 		<div class="container-fluid" id="pageContent">
 			<div class="row">
 				<div class="col-md-12">
-					<p>We'll be posting our thoughts about new tech, fun things to try, food we eat, nature, basically anything that we're interested in.</p>
-					<p>We promise to always fully research our work and give you all of the details.</p>
+					<h2>How to make a NAS RAID 0 backup drive using a Raspberry Pi for Macs</h2>
+					<p>After graduating college, I moved to a new apartment close to my job. During the packing process, I found a Raspberry Pi that I had recieved as a gift one Christmas. However, I never got around to programming some cool DIY project with it. I realized that I had a backup drive lying around, and because I have multiple computers, I thought to myself that it would be pretty cool if I could just have one repository for all of data. I didn't want to create just a normal back up drive, rather I wanted do something fancy: create a RAID as well. So I bought another hard drive and started Googling for how to get started. Now, being a computer sciece major in college, most of the commands were pretty easy. However, the tricky part proved to be getting it to work for HFS+ formatted drives (because I use Macs). Thus, the following process is what worked for me. I've compiled information from multiple sources, and through trial and error, have come up with a set of explicit directions to get this working. So if you are a Mac user, then look no further for how to make a NAS RAID 0 backup drive with your Raspberry Pi!</p>
+					<p>I want to give credit where credit is due, so these are some of the srouces I consulted while figuring things out:</p>
+					<ul>
+						<li><a href="http://raspipress.com/2013/05/turn-a-raspberry-pi-into-a-nas-network-attached-storage-server/">http://raspipress.com/2013/05/turn-a-raspberry-pi-into-a-nas-network-attached-storage-server/</a></li>
+						<li><a href="http://www.howtogeek.com/139433/how-to-turn-a-raspberry-pi-into-a-low-power-network-storage-device/">http://www.howtogeek.com/139433/how-to-turn-a-raspberry-pi-into-a-low-power-network-storage-device/</a></li>
+						<li><a href="https://raspberrypibeginner.wordpress.com/2013/03/05/mounting-hfs-from-mac-to-rpi/">https://raspberrypibeginner.wordpress.com/2013/03/05/mounting-hfs-from-mac-to-rpi/</a></li>
+						<li><a href="http://pimylifeup.com/raspberry-pi-nas/">http://pimylifeup.com/raspberry-pi-nas/</a></li>
+					</ul>
+					<p>Without further ado, here's the instructions. Feel free to contact me if you need some help</p>
+					<ol>
+						<li>Install NOOBs and Raspbian Weezy on your Raspberry Pi <a href="https://www.raspberrypi.org/documentation/installation/noobs.md">https://www.raspberrypi.org/documentation/installation/noobs.md</a></li>
+						<li>Make sure that you enable SSH <a href="https://www.raspberrypi.org/documentation/configuration/raspi-config.md">https://www.raspberrypi.org/documentation/configuration/raspi-config.md</a></li>
+						<li>Connect your Raspberry Pi to your network <a href="https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md">https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md</a></li>
+						<li>SSH into your Raspberry Pi to work from your Mac <a href="https://www.raspberrypi.org/documentation/remote-access/ssh/README.md">https://www.raspberrypi.org/documentation/remote-access/ssh/README.md</a></li>
+						<li>Before plugging in your harddrives to your Raspberry Pi, open up Disk Utility on your mac and format the drives as Mac OS X Extended (Journaled) with Master Boot Record selected as the sub option. I believe that this allows the drive to be read by Windows computers (like on Bootcamp) just in case</li>
+						<li>Type <code>sudo apt-get update</code> to update the pi.</li>
+						<li>Type <code>sudo apt-get install hfsplus hfsutils hfsprogs</code> to install the HFS tools.</li>
+						<li>Type <code>sudo apt-get install samba samba-common-bin</code> to install the samba server</li>
+						<li>Type <code>sudo apt-get install rsync</code> to install the rsync tools that we'll use to automatically copy information between drives.</li>
+						<li>Now, type <code>sudo fdisk -l</code> and look for two things. The first is to check that the drives show up as HFS+ under the System column. The second is to write down the names of the drives, such as /dev/sdb1.</li>
+						<li>Make 2 directories that drives will be mounted to <code>sudo mkdir /media/NASHDD1</code> and <code>sudo mkdir /media/NASHDD2</code></li>
+						<li>Create a user for yourself, besides the one that you may have made when setting up the pi. This will be used to log into your Backup drive. <code>sudo useradd insert_user_name -m -g users</code></li>
+						<li>Add a password to that user account: <code>sudo passwd your_user_name</code></li>
+						<li>We now need to automatically mount the harddrives to the correct folders. Open up the fstab file with the command: <code>sudo nano /etc/fstab</code>. Then, add the following lines<br /><code>HD1_name_from_step_10	/media/NASHDD1	hfsplus	force,rw,user   0    0</code><br /><code>HD2_name_from_step_10	/media/NASHDD2	hfsplus	force,rw,user   0    0</code><br />Make sure to save the file.
+						</li>
+						<li>Make a backup of the Samba config file: <code>sudo cp /etc/samba/smb.conf /etc/samba/smb.conf.old</code></li>
+						<li>Time to edit the Samba config file: <code>sudo nano /etc/samba/smb.conf</code></li>
+						<li>In this file, uncomment the line with "security = user". Then, scroll to the bottom and add the following:<br />
+							<code>[NAS]
+								<br />comment = NAS Folder
+								<br />path = /media/NASHDD1
+								<br />valid users = @users
+								<br />force group = users
+								<br />create mask = 0660
+								<br />directory mask = 0771
+								<br />read only = no
+							</code>
+							<br />Make sure you save the file.
+						</li>
+						<li>Restart Samba <code>sudo /etc/init.d/samba restart</code></li>
+						<li>Add the user you created earlier to Samba: <code>sudo smbpasswd -a your_username_from_before</code></li>
+						<li>This took me forever to figure out. For some reason, you have to set the permissions for the user to be able to access the HFS hard drives. This seemed to have to do with Mac formatted drives in linux.<br /><code>sudo chown -R your_username /media/NASHDD1</code><br />
+						<code>sudo chown -R your_username /media/NASHDD2</code></li>
+						<li>Go ahead and reboot your Raspberry Pi to mount the drives with <code>sudo reboot</code></li>
+						<li>SSH in again and do the <code>df</code> command to ensure that your drives are mounted correctly.</li>
+						<li>Finally, it's time to make the "RAID 0" part. Open up the cron job list with <code>crontab -e</code></li>
+						<li>Add the line <code>0 5 * * * sudo rsync -av --delete /media/NASHDD1/ /media/NASHDD2/</code> to the end. You can refer to the above links to better understand what the various aspects mean, but basically we want to copy the contents of the first hard drive autommatically into the second hard drive.</li>
+						<li>To make the initial load lighter, you can copy some files in and run <code>sudo rsync -av --delete /media/NASHDD1/ /media/NASHDD2</code></li>
+					</ol>
+					<p>Now you should have a fully functioning back up drive!</p>
 				</div>
 			</div>
 		</div>
