@@ -1,0 +1,32 @@
+#fieldbookLogo {
+	width: 500px;
+	height: auto;
+	margin: 0 auto;
+}
+#fieldbookScreenshot {
+	width: 250px;
+	height: auto;
+}
+.iOSPageContent {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-size: 50px;
+}
+.background1 {
+	background-color: #D6D6DB;
+}
+#FieldBookHeader {
+	padding-bottom: 20px;
+}
+#featuresHeader{
+	text-align: center;
+}
+#featuresDescription {
+	font-size: 20px;
+}
+#copyrightInfo{
+	font-size: 10px;
+}
+#appStoreIcon{
+	padding-bottom: 10px;
+}

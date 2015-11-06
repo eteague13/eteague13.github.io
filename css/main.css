@@ -10,7 +10,6 @@ html, body {
 	color: white;
 	font-size: 20px;
 	float: none;
-
 }
 
 #navigationList {
@@ -52,22 +51,6 @@ html, body {
 	color:#000 !important;
 }
 
-#aboutUsContent {
-	text-align: center;
-}
-
-#aboutUsContent ul {
-	list-style:none;
-}
-
-#mission, #vision, #principles, #web_paths, #question {
-	border-radius: 20px;
-	border: 2px solid blue;
-	width: 80%;
-	margin: 20px auto;
-	padding: 20px;
-}
-
 
 .footer {
 	height: 50px;
@@ -102,65 +85,6 @@ html, body {
 
 #homeImage2 {
 	background-image: url('../media/team.jpg');
-}
-
-/*iOS Applications*/
-#fieldbookLogo {
-	width: 500px;
-	height: auto;
-	margin: 0 auto;
-}
-#fieldbookScreenshot {
-	width: 250px;
-	height: auto;
-}
-.iOSPageContent {
-	padding-top: 20px;
-	padding-bottom: 20px;
-	font-size: 50px;
-}
-.background1 {
-	background-color: #D6D6DB;
-}
-#FieldBookHeader {
-	padding-bottom: 20px;
-}
-#featuresHeader{
-	text-align: center;
-}
-#featuresDescription {
-	font-size: 20px;
-}
-#copyrightInfo{
-	font-size: 10px;
-}
-#appStoreIcon{
-	padding-bottom: 10px;
-}
-
-/*contactus*/
-#contactUs {
-	text-align: center;
-}
-#mailLink:hover {
-	opacity: 0.6;
-}
-
-#mailIcon {
-	width: 60%;
-	height: 40%;
-}
-
-#photoGallery ul {
-    padding:0 0 0 0;
-    margin:0 0 0 0;
-}
-#photoGallery ul li {
-    list-style:none;
-    margin-bottom:25px;
-}
-#photoGallery ul li img {
-    cursor: pointer;
 }
 
 @media screen and (max-width: 767px) {

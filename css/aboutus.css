@@ -1,0 +1,11 @@
+#mission, #vision, #principles {
+	border-radius: 20px;
+	border: 2px solid blue;
+	width: 80%;
+	margin: 20px auto;
+	padding: 20px;
+}
+
+#aboutUsContent h2{
+	text-align: center;
+}
