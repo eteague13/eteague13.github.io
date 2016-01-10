@@ -80,11 +80,11 @@ html, body {
 }
 
 #homeImage1 {
-	background-image: url('../media/digital.jpg');
+	background-image: url('../media/fieldbook.png');
 }
 
 #homeImage2 {
-	background-image: url('../media/team.jpg');
+	background-image: url('../media/fieldbook.png');
 }
 
 @media screen and (max-width: 767px) {

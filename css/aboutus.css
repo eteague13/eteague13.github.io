@@ -1,4 +1,4 @@
-#mission, #vision, #principles {
+.bio {
 	border-radius: 20px;
 	border: 2px solid blue;
 	width: 80%;
@@ -9,3 +9,10 @@
 #aboutUsContent h2{
 	text-align: center;
 }
+
+.bioImage {
+	width: 300px;
+	height: 250px;
+	margin: 0 auto;
+}
+
