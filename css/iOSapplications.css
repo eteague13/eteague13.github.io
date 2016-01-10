@@ -3,7 +3,7 @@
 	height: auto;
 	margin: 0 auto;
 }
-#fieldbookScreenshot {
+.fieldbookScreenshot {
 	width: 250px;
 	height: auto;
 }
@@ -29,4 +29,31 @@
 }
 #appStoreIcon{
 	padding-bottom: 10px;
+}
+
+@media screen and (max-width: 990px) {
+	p {
+		text-align: center;
+	}
+
+	.fieldbookScreenshot {
+		margin: 0 auto;
+	}
+
+}
+
+@media screen and (max-width: 510px) {
+	#fieldbookLogo {
+		width: 300px;
+	}
+
+	p {
+		font-size: 25px;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	#fieldbookLogo {
+		width: 250px;
+	}
 }
