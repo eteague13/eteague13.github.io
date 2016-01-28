@@ -1,0 +1,129 @@
+html, body {
+	background-color: gray;
+	color: white;
+}
+
+html { 
+	position: relative;
+}
+
+body {
+	margin-bottom: 150px;
+}
+
+#headerNav {
+	height: 150px;
+	background-color: black;
+	border-color: black;
+}
+
+#navigationLogo {
+	padding-top: 20px;
+	padding-left: 10%;
+}
+#navigationItems {
+	padding-top: 100px;
+}
+
+#navigationItems ul li a {
+	color: gray;
+}
+
+#logo {
+	width: 306px;
+	height: 90px;
+}
+
+#fieldBookLogo {
+	width: 334px;
+	height: 334px;
+
+}
+
+.divider {
+	width: 80%;
+	box-shadow: 1px -1px 10px black;
+}
+
+.fieldbookScreenshot {
+	width: 68px;
+	height: 114px;
+}
+
+.textUnderline {
+	text-decoration: underline;
+}
+
+.side-tab {
+	background-color: #303030;
+	height: 100%;
+}
+
+.home-text-medium {
+	font-size: 20px;
+}
+
+.home-text-large {
+	font-size: 70px;
+}
+
+.home-text-small {
+	font-size: 12px;
+	padding-top: 10px;
+	padding-right: 50px;
+}
+
+.home-page-buttons {
+	background-color: #66CCFF;
+	color: white;
+	border-color: #66CCFF;
+	border-radius: 0;
+	font-size: 20px;
+}
+
+.homepageImage {
+	width: 300px;
+	height: 160px;
+}
+
+.home-section2-header {
+	color: #00A9FF;
+	font-size: 30px;
+
+}
+#major-display-text {
+	color: orange;
+}
+
+
+#appStoreIcon {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+#footerRight {
+	background-color: #303030;
+	height: 150px;
+}
+
+#homepageSection2 {
+	padding-bottom: 40px;
+}
+
+.text-links {
+	color: white;
+}
+.footer {
+	height: 150px;
+	background-color: black;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+}
+.main-container {
+	padding-bottom: 50px;
+}
+
+
+
+
