@@ -1,116 +1,129 @@
 html, body {
-	background-color: white;
-	height: 100%;
-	color: black;
+	background-color: gray;
+	color: white;
+}
+
+html { 
+	position: relative;
+}
+
+body {
+	margin-bottom: 150px;
 }
 
 #headerNav {
+	height: 150px;
 	background-color: black;
-	border: none;
-	color: white;
-	font-size: 20px;
-	float: none;
+	border-color: black;
 }
 
-#navigationList {
-	text-align: center;
-	width: 100%;
+#navigationLogo {
+	padding-top: 20px;
+	padding-left: 10%;
+}
+#navigationItems {
+	padding-top: 100px;
 }
 
-#navigationList li{
-	float: none;
-	display: inline-block;
-}
-#navigationList li a {
-	color: white;
-}
-#navigationList li a:hover {
-	background-color: white;
-	color: black;
+#navigationItems ul li a {
+	color: gray;
 }
 
-	
 #logo {
-	text-align: center;
-	background-color: black;
+	width: 306px;
+	height: 90px;
 }
 
-.dropdown-menu {
-	background-color: black;
+#fieldBookLogo {
+	width: 334px;
+	height: 334px;
+
+}
+
+.divider {
+	width: 80%;
+	box-shadow: 1px -1px 10px black;
+}
+
+.fieldbookScreenshot {
+	width: 68px;
+	height: 114px;
+}
+
+.textUnderline {
+	text-decoration: underline;
+}
+
+.side-tab {
+	background-color: #303030;
+	height: 100%;
+}
+
+.home-text-medium {
 	font-size: 20px;
 }
 
-.dropdown-menu li a:hover {
-	background-color: white;
-	color: black !important;
+.home-text-large {
+	font-size: 70px;
 }
 
-.dropdown-toggle:active, 
-.open .dropdown-toggle {
-	background:#FFF !important; 
-	color:#000 !important;
+.home-text-small {
+	font-size: 12px;
+	padding-top: 10px;
+	padding-right: 50px;
+}
+
+.home-page-buttons {
+	background-color: #66CCFF;
+	color: white;
+	border-color: #66CCFF;
+	border-radius: 0;
+	font-size: 20px;
+}
+
+.homepageImage {
+	width: 300px;
+	height: 160px;
+}
+
+.home-section2-header {
+	color: #00A9FF;
+	font-size: 30px;
+
+}
+#major-display-text {
+	color: orange;
 }
 
 
-.footer {
-	height: 50px;
-	background-color: #D6D6DB;
+#appStoreIcon {
+	padding-top: 40px;
+	padding-bottom: 40px;
 }
 
-.titleScrollText {
-	min-height: 50%;
-	font-size: 40px;
-	text-align: center;
-	border-style: solid;
-	background-color: black;
+#footerRight {
+	background-color: #303030;
+	height: 150px;
+}
+
+#homepageSection2 {
+	padding-bottom: 40px;
+}
+
+.text-links {
 	color: white;
 }
-.homeScrollText {
-	min-height: 50%;
-	font-size: 40px;
-	text-align: center;
+.footer {
+	height: 150px;
+	background-color: black;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+}
+.main-container {
+	padding-bottom: 50px;
 }
 
-.homeFixedImage {
-	min-height: 50%;
-	background-size: cover;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-position: center center;
-}
 
-#homeImage1 {
-	background-image: url('../media/fieldbook.png');
-}
 
-#homeImage2 {
-	background-image: url('../media/fieldbook.png');
-}
 
-@media screen and (max-width: 767px) {
-	#navigationList {
-		text-align: left;
-		float: left;
-	}
-	#navigationList li {
-		position: relative;
-		display: block;
-	}
-
-}
-@media screen and (max-width: 660px) {
-	#logoIcon {
-		width: 400px;
-		height: 100px;
-	}
-	#logo {
-		text-align: left;
-	}
-}
-
-@media screen and (max-width: 420px){
-	#logoIcon {
-		width: 300px;
-		height: 75px;
-	}
-}

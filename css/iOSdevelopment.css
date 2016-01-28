@@ -1,0 +1,15 @@
+.screenshot {
+	width: 155px;
+	height: 280px;
+}
+
+.app-text-header {
+	font-size: 30px;
+	color: #66CCFF;
+}
+
+.divider-small {
+	width: 40%;
+	box-shadow: 1px -1px 10px black;
+}
+

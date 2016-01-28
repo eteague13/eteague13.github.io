@@ -1,5 +1,6 @@
 #contactUs {
-	text-align: center;
+	width: 605px;
+	height: 350px;
 }
 #mailLink:hover {
 	opacity: 0.6;
@@ -8,16 +9,4 @@
 #mailIcon {
 	width: 60%;
 	height: 40%;
-}
-
-#photoGallery ul {
-    padding:0 0 0 0;
-    margin:0 0 0 0;
-}
-#photoGallery ul li {
-    list-style:none;
-    margin-bottom:25px;
-}
-#photoGallery ul li img {
-    cursor: pointer;
 }

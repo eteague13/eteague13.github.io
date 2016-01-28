@@ -20,54 +20,59 @@
 	</head>
 
 	<body>
-		<div class="container-fluid" id="logo">
-			<img src="../media/inoloc.png" id="logoIcon">
-		</div>
 		<nav class="navbar navbar-default" id="headerNav">
 			<div class="container-fluid">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigationBar">
+				<div class="navbar-header" id="navigationLogo">
+					<a class="navbar-brand" href="#">
+						<img src="../media/inoloc-logo.png" id="logo">
+					</a>
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigationItems">
 						<span class="icon-bar"></span>
 					    <span class="icon-bar"></span>
 					    <span class="icon-bar"></span> 
 					</button>
 				</div>
-				<div class="navbar-collapse collapse" id="navigationBar">
-					<ul class="nav navbar-nav" id="navigationList">
+				<div class="navbar-collapse collapse" id="navigationItems">
+					<ul class="nav navbar-nav navbar-right">
 						<li><a href="../index.html">Home</a></li>
-						<li><a href="aboutus.html">About Us</a></li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Products and Services<span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a href="iOSapplications.html">iOS Applications</a></li>
-							</ul>
-						</li>
-						<li><a href="#">Scratch Pad</a></li>
+						<li><a href="iOSdevelopment.html">iOS Development</a></li>
+						<li><a href="#">Tutorials</a></li>
 						<li><a href="contactus.html">Contact Us</a></li>
 					</ul>
 				</div>
 			</div>
 		</nav>
-		<div class="container-fluid" id="pageContent">
+		<div class="container-fluid">
 			<div class="row">
-				<div class="col-md-12">
-					<h1>Welcome to Scratch Pad! Here we plan to post on really anything from an editorial to a tutorial to just some random musing on something that interests us.</h1>
+				<div class="col-md-2 side-tab">
+					<h2>Tutorials</h2>
+					<ul>
+						<li>NAS RAID 0 (For Mac)</li>
+					</ul>
+				</div>
+				<div class="col-md-10 text-center">
 					<h2>How to make a NAS RAID 0 backup drive for Macs using a Raspberry Pi</h2>
+				</div>
+			</div>
+			<hr class="divider">
+			<div class="row main-container">
+				<div class="col-md-2"></div>
+				<div class="col-md-8">
 					<h5>Published: 11/4/15</h5>
 					<p>Have you ever wanted a RAID network back up drive but not want to pay hundreds of dollars? Have you wanted one that is formatted especially for your Mac? I set out to create a cheap NAS RAID 0 with a Raspberry Pi. I tried finding online tutorials, but the ones for Mac were few in number and there were a few missing pieces. Thus, I hope that this explicit set of instructions works out for you.</p>
 					<p>I want to give credit where credit is due, so these are some of the srouces I consulted while figuring things out:</p>
 					<ul>
-						<li><a href="http://raspipress.com/2013/05/turn-a-raspberry-pi-into-a-nas-network-attached-storage-server/">http://raspipress.com/2013/05/turn-a-raspberry-pi-into-a-nas-network-attached-storage-server/</a></li>
-						<li><a href="http://www.howtogeek.com/139433/how-to-turn-a-raspberry-pi-into-a-low-power-network-storage-device/">http://www.howtogeek.com/139433/how-to-turn-a-raspberry-pi-into-a-low-power-network-storage-device/</a></li>
-						<li><a href="https://raspberrypibeginner.wordpress.com/2013/03/05/mounting-hfs-from-mac-to-rpi/">https://raspberrypibeginner.wordpress.com/2013/03/05/mounting-hfs-from-mac-to-rpi/</a></li>
-						<li><a href="http://pimylifeup.com/raspberry-pi-nas/">http://pimylifeup.com/raspberry-pi-nas/</a></li>
+						<li><a class="text-links" href="http://raspipress.com/2013/05/turn-a-raspberry-pi-into-a-nas-network-attached-storage-server/">http://raspipress.com/2013/05/turn-a-raspberry-pi-into-a-nas-network-attached-storage-server/</a></li>
+						<li><a class="text-links" href="http://www.howtogeek.com/139433/how-to-turn-a-raspberry-pi-into-a-low-power-network-storage-device/">http://www.howtogeek.com/139433/how-to-turn-a-raspberry-pi-into-a-low-power-network-storage-device/</a></li>
+						<li><a class="text-links" href="https://raspberrypibeginner.wordpress.com/2013/03/05/mounting-hfs-from-mac-to-rpi/">https://raspberrypibeginner.wordpress.com/2013/03/05/mounting-hfs-from-mac-to-rpi/</a></li>
+						<li><a class="text-links" href="http://pimylifeup.com/raspberry-pi-nas/">http://pimylifeup.com/raspberry-pi-nas/</a></li>
 					</ul>
 					<p>Without further ado, here's the instructions. Feel free to contact me if you need some help</p>
 					<ol>
-						<li>Install NOOBs and Raspbian Weezy on your Raspberry Pi <a href="https://www.raspberrypi.org/documentation/installation/noobs.md">https://www.raspberrypi.org/documentation/installation/noobs.md</a></li>
-						<li>Make sure that you enable SSH <a href="https://www.raspberrypi.org/documentation/configuration/raspi-config.md">https://www.raspberrypi.org/documentation/configuration/raspi-config.md</a></li>
-						<li>Connect your Raspberry Pi to your network <a href="https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md">https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md</a></li>
-						<li>SSH into your Raspberry Pi to work from your Mac <a href="https://www.raspberrypi.org/documentation/remote-access/ssh/README.md">https://www.raspberrypi.org/documentation/remote-access/ssh/README.md</a></li>
+						<li>Install NOOBs and Raspbian Weezy on your Raspberry Pi <a class="text-links" href="https://www.raspberrypi.org/documentation/installation/noobs.md">https://www.raspberrypi.org/documentation/installation/noobs.md</a></li>
+						<li>Make sure that you enable SSH <a class="text-links" href="https://www.raspberrypi.org/documentation/configuration/raspi-config.md">https://www.raspberrypi.org/documentation/configuration/raspi-config.md</a></li>
+						<li>Connect your Raspberry Pi to your network <a class="text-links" href="https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md">https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md</a></li>
+						<li>SSH into your Raspberry Pi to work from your Mac <a class="text-links" href="https://www.raspberrypi.org/documentation/remote-access/ssh/README.md">https://www.raspberrypi.org/documentation/remote-access/ssh/README.md</a></li>
 						<li>Before plugging in your harddrives to your Raspberry Pi, open up Disk Utility on your mac and format the drives as Mac OS X Extended (Journaled) with Master Boot Record selected as the sub option. I believe that this allows the drive to be read by Windows computers (like on Bootcamp) just in case</li>
 						<li>Type <code>sudo apt-get update</code> to update the pi.</li>
 						<li>Type <code>sudo apt-get install hfsplus hfsutils hfsprogs</code> to install the HFS tools.</li>
@@ -106,10 +111,26 @@
 					<p>Now you should have a fully functioning back up drive!</p>
 				</div>
 			</div>
+			<div class="col-md-2"></div>
 		</div>
 		<footer class="footer">
       		<div class="container-fluid">
-        		<p class="text-center">inoloc 2015</p>
+      			<div class="row">
+      				<div class="col-md-1"></div>
+      				<div class="col-md-3">
+		        		<h2 style="font-size: 45px;">
+		        			<span style="color: #00A9FF;">Designing for</span>
+		        			<span style="color: white">Accessibility</span>
+		        		</h2>
+		        	</div>
+		        	<div class="col-md-4" style="padding-top: 20px;">
+		        		<p>Our mission is to develop solutions to facilitate productivity and efficiency through iOS development as well as tutorials.</p>
+		        		<a href="contactus.html" class="btn btn-default home-page-buttons">Contact</a>
+		        	</div>
+        			<div class="col-md-3" id="footerRight">
+        				<h2><span style="color: #00A9FF; font-size: 60px;">Contribute</span> to our Development</h2>
+        			</div>
+        			<div class="col-md-1"></div>
       		</div>
     	</footer>
 	</body>
