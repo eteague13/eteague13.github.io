@@ -1,10 +1,12 @@
 html, body {
 	background-color: gray;
 	color: white;
+	width: 100%;
 }
 
 html { 
 	position: relative;
+
 }
 
 body {
@@ -12,7 +14,6 @@ body {
 }
 
 #headerNav {
-	height: 150px;
 	background-color: black;
 	border-color: black;
 }
@@ -37,7 +38,6 @@ body {
 #fieldBookLogo {
 	width: 334px;
 	height: 334px;
-
 }
 
 .divider {
@@ -122,6 +122,71 @@ body {
 }
 .main-container {
 	padding-bottom: 50px;
+}
+
+.row {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.footer-text-large {
+	font-size: 45px;
+}
+
+@media screen and (max-width: 992px) {
+	.home-section {
+		text-align: center;
+	}
+	.home-text-small {
+		padding-right: 0;
+	}
+
+	.footer-section {
+		padding-left: 0;
+		padding-right: 0;
+		margin-right: 0;
+		margin-left: 0;
+	}
+
+	body {
+		margin-bottom: 440px;
+	}
+	.footer {
+		height: 440px;
+	}
+}
+@media screen and (max-width: 767px) {
+	#logo {
+		width: 206px;
+		height: 60px;
+		margin: 0 auto;
+	}
+	#navigationItems {
+		padding-top: 0;
+	}
+	#navigationLogo {
+		padding-top: 0;
+		padding-left: 0;
+	}
+	.navbar-brand{
+		float: none;
+	}
+}
+
+@media screen and (max-width: 367px) {
+	.home-text-large {
+		font-size: 60px;
+	}
+
+	#fieldBookLogo {
+		width: 270px;
+		height: 270px;
+	}
+
+	.homepageImage {
+		width: 250px;
+		height: 130px;
+	}
 }
 
 

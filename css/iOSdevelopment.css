@@ -13,3 +13,9 @@
 	box-shadow: 1px -1px 10px black;
 }
 
+@media screen and (max-width: 992px) {
+	.page-section {
+		text-align: center;
+	}
+}
+

@@ -10,3 +10,15 @@
 	width: 60%;
 	height: 40%;
 }
+
+@media screen and (max-width: 992px) {
+	#contactUs {
+		padding-top: 20px;
+		width: 80%;
+		height: auto;
+	}
+
+	.page-section {
+		text-align: center;
+	}
+}
