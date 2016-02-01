@@ -8,6 +8,9 @@
 		<link href="../css/iOSdevelopment.css" rel="stylesheet">
 		<script src="../js/jquery-2.1.4.min.js"></script>
 		<script src="../js/bootstrap.min.js"></script>
+		<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
 		<script>
   			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -17,13 +20,35 @@
 			  ga('send', 'pageview');
 
 		</script>
+		<script>
+			$(window).resize(){
+    			resize();
+			}
+
+			$(document).ready(){
+    			resize();
+			}
+
+			function resize(){
+			    if($(window).width() < 992)
+			    {
+			        //$("#entriesText").insertAfter(".home-text-medium");
+
+			    }
+			}
+			
+		</script>
+		<script>
+			document.getElementById('test').style.display="none";
+		</script>
+		
 	</head>
 
 	<body>
 		<nav class="navbar navbar-default" id="headerNav">
 			<div class="container-fluid">
 				<div class="navbar-header" id="navigationLogo">
-					<a class="navbar-brand" href="#">
+					<a class="navbar-brand" href="../version3.html">
 						<img src="../media/inoloc-logo.png" id="logo">
 					</a>
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigationItems">
@@ -33,6 +58,14 @@
 					</button>
 				</div>
 				<div class="navbar-collapse collapse" id="navigationItems">
+					<ul class="nav navbar-nav navbar-left">
+						<li class="dropdown">
+				          <a href="#" class="dropdown-toggle custom-dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects<span class="caret"></span></a>
+				          <ul class="dropdown-menu">
+				            <li><a href="#" class="custom-dropdown">FieldBook</a></li>
+				          </ul>
+				        </li>
+				    </ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="../version3.html">Home</a></li>
 						<li><a href="iOSdevelopment.html">iOS Development</a></li>
@@ -44,16 +77,12 @@
 		</nav>
 		<div class="container-fluid main-container">
 			<div class="row">
-				<div class="col-md-2 side-tab">
-					<h2>iOS Development</h2>
-					<h4>Projects</h4>
-					<ul>
-						<li>FieldBook</li>
-					</ul>
-				</div>
+				<div class="col-md-2"></div>
 				<div class="col-md-4 page-section">
 					<p class="home-text-medium">Introducing our first iOS app,</p>
+					<br><br><br>
 					<h3 class="home-text-large"><span id="major-display-text">FieldBook</span></h3>
+					<br><br><br>
 					<p>FieldBook is designed to help compile information while out in the field. FieldBook on your iOS device can easily be adapted to collect data for later analysis or to keep a record of your latest project.<br><br>With DropBox connectivity and data export features.</p>
 				</div>
 				<div class="col-md-4 text-center">
@@ -84,13 +113,14 @@
 			<div class="row page-section">
 				<div class="col-md-3"></div>
 				<div class="col-md-8">
-					<div class="col-md-6">
+					<div class="col-md-6" id="entriesText">
 						<h4 class="app-text-header">Entries</h4>
 						<p class="app-text">Each project contains your list of entries with numerous editable fields.<br><br>Including: Notes, Location & Weather, Pictures, Sketches, Sample Numbers, Descriptions, Data Table, Strike / Dip...and more!</p>
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-4" id="entriesScreenshot">
 						<img src="../media/fieldbook-entry.png" class="screenshot" />
 					</div>
+					<div id="test">adfasassa</div>
 				</div>
 				<div class="col-md-1"></div>
 			</div>
@@ -151,7 +181,7 @@
 		        		<p>Our mission is to develop solutions to facilitate productivity and efficiency through iOS development as well as tutorials.</p>
 		        		<a href="pages/contactus.html" class="btn btn-default home-page-buttons">Contact</a>
 		        	</div>
-        			<div class="col-md-3 footer-section" id="footerRight">
+        			<div class="col-md-3 footer-section text-center" id="footerRight">
         				<h2><span class="footer-text-large" style="color: #00A9FF;">Contribute</span><br> to our Development</h2>
         			</div>
         			<div class="col-md-1 footer-section"></div>

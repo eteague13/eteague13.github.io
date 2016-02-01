@@ -1,5 +1,5 @@
 html, body {
-	background-color: gray;
+	background-color: #484848;
 	color: white;
 	width: 100%;
 }
@@ -27,7 +27,8 @@ body {
 }
 
 #navigationItems ul li a {
-	color: gray;
+	color: #A0A0A0 ;
+	font-size: 17px;
 }
 
 #logo {
@@ -49,6 +50,8 @@ body {
 	width: 68px;
 	height: 114px;
 }
+
+
 
 .textUnderline {
 	text-decoration: underline;
@@ -74,11 +77,11 @@ body {
 }
 
 .home-page-buttons {
-	background-color: #66CCFF;
+	background-color: #303030;
 	color: white;
-	border-color: #66CCFF;
+	border-color: #303030;
 	border-radius: 0;
-	font-size: 20px;
+	font-size: 13px;
 }
 
 .homepageImage {
@@ -92,7 +95,7 @@ body {
 
 }
 #major-display-text {
-	color: orange;
+	color: #F08307;
 }
 
 
@@ -133,6 +136,10 @@ body {
 	font-size: 45px;
 }
 
+.custom-dropdown {
+	font-size: 25px !important;
+}
+
 @media screen and (max-width: 992px) {
 	.home-section {
 		text-align: center;
@@ -153,6 +160,13 @@ body {
 	}
 	.footer {
 		height: 440px;
+	}
+	.fieldbookScreenshot {
+		display: none;
+	}
+
+	.divider {
+		display: none;
 	}
 }
 @media screen and (max-width: 767px) {

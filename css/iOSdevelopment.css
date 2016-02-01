@@ -1,6 +1,6 @@
 .screenshot {
-	width: 155px;
-	height: 280px;
+	width: 175px;
+	height: 300px;
 }
 
 .app-text-header {
@@ -12,6 +12,11 @@
 	width: 40%;
 	box-shadow: 1px -1px 10px black;
 }
+
+.app-text {
+	font-size: 17px;
+}
+
 
 @media screen and (max-width: 992px) {
 	.page-section {
