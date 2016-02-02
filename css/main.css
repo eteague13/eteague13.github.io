@@ -173,6 +173,13 @@ body {
 		width: 55px;
 		height: auto;
 	}
+
+	.backdrop {
+		background-color: none;
+		margin-left: 0;
+		margin-right: 0;
+		padding-top: 0;
+	}
 }
 @media screen and (max-width: 992px) {
 	.home-section {
