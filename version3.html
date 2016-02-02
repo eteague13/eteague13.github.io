@@ -73,7 +73,7 @@
 		<div class="row" id="homepageSection2">
 			<div class="col-md-1"></div>
 			<div class="col-md-10">
-				<div class="row">
+				<div class="row" id="homepageSubSection2">
 					<div class="col-md-4 home-section">
 						<h4 class="home-section2-header">Latest News</h4>
 						<img src="media/latest_news.png" class="homepageImage"/>
@@ -111,7 +111,18 @@
 		        		<a href="pages/contactus.html" class="btn btn-default home-page-buttons">Contact</a>
 		        	</div>
         			<div class="col-md-3 footer-section text-center" id="footerRight">
-        				<h2><span class="footer-text-large" style="color: #00A9FF;">Contribute</span><br> to our Development</h2>
+        				<h3><span class="footer-text-large" style="color: #00A9FF;">Contribute</span><br> to our Development</h3>
+        				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+							<input type="hidden" name="cmd" value="_donations">
+							<input type="hidden" name="business" value="info.inoloc@gmail.com">
+							<input type="hidden" name="lc" value="US">
+							<input type="hidden" name="item_name" value="inoloc app development">
+							<input type="hidden" name="no_note" value="0">
+							<input type="hidden" name="currency_code" value="USD">
+							<input type="hidden" name="bn" value="PP-DonationsBF:btn_donate_LG.gif:NonHostedGuest">
+							<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" id="paypalButton">
+							<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+						</form>
         			</div>
         			<div class="col-md-1 footer-section"></div>
         		</div>

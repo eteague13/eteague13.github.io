@@ -21,26 +21,25 @@
 
 		</script>
 		<script>
-			$(window).resize(){
+		
+			$(window).resize(function() {
     			resize();
-			}
+			});
 
-			$(document).ready(){
+
+			$(document).ready(function() {
     			resize();
-			}
+			});
 
 			function resize(){
 			    if($(window).width() < 992)
 			    {
-			        //$("#entriesText").insertAfter(".home-text-medium");
-
+			        $("#entriesText").insertAfter("#entriesScreenshot");
+			        $("#climateText").insertAfter("#climateScreenshot");
 			    }
 			}
-			
 		</script>
-		<script>
-			document.getElementById('test').style.display="none";
-		</script>
+		
 		
 	</head>
 
@@ -58,14 +57,6 @@
 					</button>
 				</div>
 				<div class="navbar-collapse collapse" id="navigationItems">
-					<ul class="nav navbar-nav navbar-left">
-						<li class="dropdown">
-				          <a href="#" class="dropdown-toggle custom-dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects<span class="caret"></span></a>
-				          <ul class="dropdown-menu">
-				            <li><a href="#" class="custom-dropdown">FieldBook</a></li>
-				          </ul>
-				        </li>
-				    </ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="../version3.html">Home</a></li>
 						<li><a href="iOSdevelopment.html">iOS Development</a></li>
@@ -75,14 +66,13 @@
 				</div>
 			</div>
 		</nav>
-		<div class="container-fluid main-container">
+		<div class="container-fluid main-container backdrop">
 			<div class="row">
 				<div class="col-md-2"></div>
-				<div class="col-md-4 page-section">
+				<div class="col-md-4 page-section" style="padding-top: 30px; ">
 					<p class="home-text-medium">Introducing our first iOS app,</p>
-					<br><br><br>
 					<h3 class="home-text-large"><span id="major-display-text">FieldBook</span></h3>
-					<br><br><br>
+					<br><br>
 					<p>FieldBook is designed to help compile information while out in the field. FieldBook on your iOS device can easily be adapted to collect data for later analysis or to keep a record of your latest project.<br><br>With DropBox connectivity and data export features.</p>
 				</div>
 				<div class="col-md-4 text-center">
@@ -120,7 +110,6 @@
 					<div class="col-md-4" id="entriesScreenshot">
 						<img src="../media/fieldbook-entry.png" class="screenshot" />
 					</div>
-					<div id="test">adfasassa</div>
 				</div>
 				<div class="col-md-1"></div>
 			</div>
@@ -142,11 +131,11 @@
 			<div class="row page-section">
 				<div class="col-md-3"></div>
 				<div class="col-md-8">
-					<div class="col-md-6">
+					<div class="col-md-6" id="climateText">
 						<h4 class="app-text-header">Climate Data</h4>
 						<p class="app-text">Use the built-in GPS and a 3rd party weather service to get accurate data for your location.</p>
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-4" id="climateScreenshot">
 						<img src="../media/fieldbook-climate.png" class="screenshot" />
 					</div>
 				</div>
@@ -182,11 +171,26 @@
 		        		<a href="pages/contactus.html" class="btn btn-default home-page-buttons">Contact</a>
 		        	</div>
         			<div class="col-md-3 footer-section text-center" id="footerRight">
-        				<h2><span class="footer-text-large" style="color: #00A9FF;">Contribute</span><br> to our Development</h2>
+        				<h3><span class="footer-text-large" style="color: #00A9FF;">Contribute</span><br> to our Development</h3>
+        				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+							<input type="hidden" name="cmd" value="_donations">
+							<input type="hidden" name="business" value="info.inoloc@gmail.com">
+							<input type="hidden" name="lc" value="US">
+							<input type="hidden" name="item_name" value="inoloc app development">
+							<input type="hidden" name="no_note" value="0">
+							<input type="hidden" name="currency_code" value="USD">
+							<input type="hidden" name="bn" value="PP-DonationsBF:btn_donate_LG.gif:NonHostedGuest">
+							<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" id="paypalButton">
+							<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+						</form>
         			</div>
         			<div class="col-md-1 footer-section"></div>
         		</div>
       		</div>
     	</footer>
+    	<script>
+
+			
+		</script>
 	</body>
 </html>

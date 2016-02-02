@@ -44,6 +44,7 @@ body {
 .divider {
 	width: 80%;
 	box-shadow: 1px -1px 10px black;
+	border-color: #A0A0A0;
 }
 
 .fieldbookScreenshot {
@@ -90,8 +91,8 @@ body {
 }
 
 .home-section2-header {
-	color: #00A9FF;
-	font-size: 30px;
+	color: #66CCFF;
+	font-size: 25px;
 
 }
 #major-display-text {
@@ -111,6 +112,11 @@ body {
 
 #homepageSection2 {
 	padding-bottom: 40px;
+	
+}
+
+#homepageSubSection2 {
+	padding-left: 20px;
 }
 
 .text-links {
@@ -137,9 +143,36 @@ body {
 }
 
 .custom-dropdown {
-	font-size: 25px !important;
+	font-size: 18px !important;
 }
 
+.backdrop {
+	background-color: #707070 ;
+	margin-left: 70px;
+	margin-right: 70px;
+}
+@media screen and (max-width: 1235px) {
+	.footer-text-large {
+		font-size: 35px;
+	}
+	#paypalButton {
+		width: 75px;
+		height: auto;
+	}
+
+	.homepageImage {
+		width: 250px;
+		height: 130px;
+	}
+
+	.home-section2-header {
+		font-size: 20px;
+	}
+	.fieldbookScreenshot {
+		width: 55px;
+		height: auto;
+	}
+}
 @media screen and (max-width: 992px) {
 	.home-section {
 		text-align: center;
@@ -167,6 +200,10 @@ body {
 
 	.divider {
 		display: none;
+	}
+
+	#homepageSubSection2 {
+		padding-left: 0;
 	}
 }
 @media screen and (max-width: 767px) {
@@ -197,10 +234,6 @@ body {
 		height: 270px;
 	}
 
-	.homepageImage {
-		width: 250px;
-		height: 130px;
-	}
 }
 
 

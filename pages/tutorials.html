@@ -33,14 +33,6 @@
 					</button>
 				</div>
 				<div class="navbar-collapse collapse" id="navigationItems">
-					<ul class="nav navbar-nav navbar-left">
-						<li class="dropdown">
-				          <a href="#" class="dropdown-toggle custom-dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tutorials<span class="caret"></span></a>
-				          <ul class="dropdown-menu">
-				            <li><a href="#" class="custom-dropdown">NAS RAID 0 (For Mac)</a></li>
-				          </ul>
-				        </li>
-				    </ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="../version3.html">Home</a></li>
 						<li><a href="iOSdevelopment.html">iOS Development</a></li>
@@ -50,7 +42,7 @@
 				</div>
 			</div>
 		</nav>
-		<div class="container-fluid">
+		<div class="container-fluid backdrop">
 			<div class="row">
 				<div class="col-md-12 text-center">
 					<h2>How to make a NAS RAID 0 backup drive for Macs using a Raspberry Pi</h2>
@@ -130,7 +122,18 @@
 		        		<a href="pages/contactus.html" class="btn btn-default home-page-buttons">Contact</a>
 		        	</div>
         			<div class="col-md-3 footer-section text-center" id="footerRight">
-        				<h2><span class="footer-text-large" style="color: #00A9FF;">Contribute</span><br> to our Development</h2>
+        				<h3><span class="footer-text-large" style="color: #00A9FF;">Contribute</span><br> to our Development</h3>
+        				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+							<input type="hidden" name="cmd" value="_donations">
+							<input type="hidden" name="business" value="info.inoloc@gmail.com">
+							<input type="hidden" name="lc" value="US">
+							<input type="hidden" name="item_name" value="inoloc app development">
+							<input type="hidden" name="no_note" value="0">
+							<input type="hidden" name="currency_code" value="USD">
+							<input type="hidden" name="bn" value="PP-DonationsBF:btn_donate_LG.gif:NonHostedGuest">
+							<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" id="paypalButton">
+							<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+						</form>
         			</div>
         			<div class="col-md-1 footer-section"></div>
         		</div>

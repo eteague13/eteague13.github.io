@@ -5,7 +5,8 @@
 
 .app-text-header {
 	font-size: 30px;
-	color: #66CCFF;
+	color: #00A9FF;
+
 }
 
 .divider-small {
@@ -16,6 +17,8 @@
 .app-text {
 	font-size: 17px;
 }
+
+
 
 
 @media screen and (max-width: 992px) {
